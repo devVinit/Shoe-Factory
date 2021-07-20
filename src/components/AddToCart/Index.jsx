@@ -8,7 +8,7 @@ function AddToCart() {
   const cartItems = useSelector((state) => state.reducer.cart);
   console.log(cartItems);
   let total = 0;
-  cartItems.map((cartItem) => {
+  cartItems = cartItems.map((cartItem) => {
     let price = cartItem.price.split("$");
     price = Number(price[1]);
     total += price * cartItem.qty;
